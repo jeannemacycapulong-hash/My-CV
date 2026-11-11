@@ -1,0 +1,143 @@
+
+.resume {
+  max-width: 850px;
+  margin: 35px auto;
+  padding: 30px;
+  background: #ffffff;
+  color: #596579;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  border-radius: 12px;
+  box-shadow: 0 6px 28px rgba(70, 86, 111, 0.20);
+}
+
+.intro {
+  text-align: center;
+  border-bottom: 1px solid #dce3eb;
+  padding-bottom: 22px;
+  margin-bottom: 30px;
+}
+
+.intro h1 {
+  margin-bottom: 8px;
+  color: #46566f;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.intro p {
+  color: #596579;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.intro a {
+  color: #526783;
+  text-decoration: none;
+}
+
+.intro a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin: 28px 0;
+}
+
+section h2 {
+  color: #46566f;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #dce3eb;
+  padding-bottom: 7px;
+  margin-bottom: 15px;
+}
+
+section p {
+  color: #596579;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 20px;
+  padding-left: 25px;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.skills-list li {
+  display: list-item;
+  list-style-type: disc;
+  color: #596579;
+  padding: 4px 0;
+}
+
+.projects-list {
+  display: block;
+  padding-left: 25px;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.projects-list li {
+  display: list-item;
+  list-style-type: disc;
+  color: #596579;
+  padding: 4px 0;
+}
+
+app-profile-card {
+  display: block;
+  margin: 25px 0;
+}
+
+.interaction {
+  padding: 18px;
+  background: #f0f3f7;
+  border: 1px solid #dce3eb;
+  border-radius: 8px;
+}
+
+.interaction h2 {
+  margin-top: 0;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background: #526783;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #3d506b;
+}
+
+@media (max-width: 600px) {
+  .resume {
+    margin: 10px;
+    padding: 18px;
+  }
+
+  .intro h1 {
+    font-size: 1.7rem;
+  }
+
+  .intro p {
+    font-size: 0.85rem;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  section h2 {
+    font-size: 1rem;
+  }
+}
