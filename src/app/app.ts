@@ -1,13 +1,15 @@
-
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Header } from './header/header';
 import { ProfileCard } from './profile-card/profile-card';
+import { Skills } from './skills/skills';
+import { Footer } from './footer/footer';
+import { Proficiency } from './proficiency';
 
 @Component({
-  imports: [RouterOutlet, ProfileCard],
   selector: 'app-root',
-  styleUrl: './app.css',
+  imports: [Header, ProfileCard, Skills, Footer],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
   fullName = 'Jeanne Macy Capulong';
@@ -33,6 +35,13 @@ projects = [
   'ADF2027 - A website for an annual School of Computing event.',
   'Culina Monde - A website showcasing international cuisines.'
 ];
+
+proficiencies: Proficiency[] = [
+    { tool: 'Visual Studio Code', level: 'Advanced' },
+    { tool: 'Git and GitHub', level: 'Intermediate' },
+    { tool: 'Node.js and npm', level: 'Intermediate' },
+    { tool: 'Angular CLI', level: 'Beginner' }
+  ];
 
   message = 'Welcome to my profile!';
   clickCount = 0;
