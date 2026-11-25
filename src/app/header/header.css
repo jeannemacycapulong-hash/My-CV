@@ -1,23 +1,45 @@
 .intro {
   text-align: center;
-  border-bottom: 1px solid #cccccc;
-  padding-bottom: 22px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px 24px;
   margin-bottom: 28px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
 .intro h1 {
-  margin-bottom: 4px;
-  color: #7a1f3d;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #365170;
   font-size: 2.2rem;
 }
 
 .intro p {
+  margin: 0;
   color: #555555;
+  line-height: 1.8;
   overflow-wrap: anywhere;
 }
 
+.intro a {
+  color: #365170;
+  text-decoration: none;
+}
+
+.intro a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 600px) {
+  .intro {
+    padding: 22px 16px;
+  }
+
   .intro h1 {
     font-size: 1.7rem;
+  }
+
+  .intro p {
+    font-size: 0.9rem;
   }
 }

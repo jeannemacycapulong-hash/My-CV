@@ -4,10 +4,12 @@ import { ProfileCard } from './profile-card/profile-card';
 import { Skills } from './skills/skills';
 import { Footer } from './footer/footer';
 import { Proficiency } from './proficiency';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  imports: [Header, ProfileCard, Skills, Footer],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -29,14 +31,13 @@ export class App {
     'MySQL'
   ];
 
+  projects = [
+    'Cafe Je - A website concept for a small local café.',
+    'ADF2027 - A website for an annual School of Computing event.',
+    'Culina Monde - A website showcasing international cuisines.'
+  ];
 
-projects = [
-  'Cafe Je - A website concept for a small local café.',
-  'ADF2027 - A website for an annual School of Computing event.',
-  'Culina Monde - A website showcasing international cuisines.'
-];
-
-proficiencies: Proficiency[] = [
+  proficiencies: Proficiency[] = [
     { tool: 'Visual Studio Code', level: 'Advanced' },
     { tool: 'Git and GitHub', level: 'Intermediate' },
     { tool: 'Node.js and npm', level: 'Intermediate' },
@@ -49,5 +50,9 @@ proficiencies: Proficiency[] = [
   showMessage() {
     this.clickCount++;
     this.message = `You clicked the button ${this.clickCount} time(s).`;
+  }
+
+  onSkillSelected(skill: string) {
+    this.message = `Selected skill: ${skill}`;
   }
 }
